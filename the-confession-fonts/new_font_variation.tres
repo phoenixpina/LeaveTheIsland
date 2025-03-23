@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://c406xybm1t2h5"]
+
+[ext_resource type="FontFile" uid="uid://co5hqwt72eb3" path="res://the-confession-fonts/TheConfessionRegular-YBpv.ttf" id="1_x6cgb"]
+
+[resource]
+base_font = ExtResource("1_x6cgb")

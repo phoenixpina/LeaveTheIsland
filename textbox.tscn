@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://djk628rkbtktf"]
+[gd_scene load_steps=4 format=3 uid="uid://djk628rkbtktf"]
 
 [ext_resource type="Script" path="res://Textbox.gd" id="1_2pdw0"]
+[ext_resource type="FontVariation" uid="uid://c406xybm1t2h5" path="res://the-confession-fonts/new_font_variation.tres" id="2_alesh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hs28q"]
+font = ExtResource("2_alesh")
+font_size = 32
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
 
 [node name="Textbox" type="CanvasLayer"]
 script = ExtResource("1_2pdw0")
@@ -10,16 +18,28 @@ anchors_preset = -1
 anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -100.0
-offset_right = 617.0
-offset_bottom = 99.0
-color = Color(0.0687983, 0.0687983, 0.0687983, 1)
+offset_left = 124.0
+offset_top = -100.4
+offset_right = -84.0
+offset_bottom = -82.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="text_label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 4.0
+offset_right = 950.0
+offset_bottom = 224.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_alesh")
+theme_override_font_sizes/font_size = 32
+text = "TEST MESSAGE
+"
+label_settings = SubResource("LabelSettings_hs28q")
 horizontal_alignment = 1
 autowrap_mode = 2
 

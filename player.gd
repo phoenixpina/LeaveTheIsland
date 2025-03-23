@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 200  # Movement speed in pixels per second
+const SPEED = 400  # Movement speed in pixels per second
 
 func _process(delta):
 	var direction = Vector2.ZERO  # Default to no movement
