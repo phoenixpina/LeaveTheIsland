@@ -17,7 +17,7 @@ func show_message(message: String) -> void:
 		var debug_font = text_label.get_theme_font("font")  # Get assigned font
 		print("Font in use:", debug_font)  # Print font info
 		visible = true
-		timer.start(5)
+		timer.start(3)
 	else:
 		print("Error: text_label is null!")
 

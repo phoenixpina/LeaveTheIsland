@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4gl1vjq2lbcq"
-path="res://.godot/imported/Tilemap_Elevation.png-cbae038dfaaff7ac249f8e8f736c0294.ctex"
+uid="uid://xmugi76ux7e3"
+path="res://.godot/imported/CardQueen.jpg-e66b292a0f86e249ff9eb3d2dc136e33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Terrain/Ground/Tilemap_Elevation.png"
-dest_files=["res://.godot/imported/Tilemap_Elevation.png-cbae038dfaaff7ac249f8e8f736c0294.ctex"]
+source_file="res://Enemies/CardQueen.jpg"
+dest_files=["res://.godot/imported/CardQueen.jpg-e66b292a0f86e249ff9eb3d2dc136e33.ctex"]
 
 [params]
 

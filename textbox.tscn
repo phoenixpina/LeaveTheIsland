@@ -18,20 +18,20 @@ anchors_preset = -1
 anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 124.0
-offset_top = -100.4
-offset_right = -84.0
-offset_bottom = -82.0
+offset_left = 252.0
+offset_top = 16.6
+offset_right = -180.0
+offset_bottom = -12.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0, 0, 0, 1)
 
 [node name="text_label" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_left = -2.0
-offset_top = 4.0
-offset_right = 950.0
-offset_bottom = 224.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 720.0
+offset_bottom = 62.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -44,7 +44,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

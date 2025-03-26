@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://baup0eh44raic" path="res://red_dot.png" id="2_pbu28"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxawd"]
-size = Vector2(92, 89)
+size = Vector2(58.5, 55.375)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_b53v2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.43051e-06, 5.49999)
-scale = Vector2(0.189753, 0.185824)
+position = Vector2(-3.38813e-21, -2.38419e-07)
+scale = Vector2(0.134725, 0.130268)
 texture = ExtResource("2_pbu28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_kxawd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
