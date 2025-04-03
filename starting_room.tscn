@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://mn3oh2vg702v"]
+[gd_scene load_steps=53 format=4 uid="uid://mn3oh2vg702v"]
 
 [ext_resource type="Texture2D" uid="uid://dx70krfo33qta" path="res://Terrain/Water/Water.png" id="1_g2ucn"]
 [ext_resource type="Texture2D" uid="uid://dpbgoyo53yk2i" path="res://Terrain/Ground/Tilemap_Flat.png" id="1_mqal3"]
@@ -28,6 +28,8 @@
 [ext_resource type="Texture2D" uid="uid://c0x7bbu51ia52" path="res://Enemies/MoneyYen.png" id="21_cthq7"]
 [ext_resource type="Texture2D" uid="uid://vgkofs2vxf6f" path="res://Enemies/Shark2.jpg" id="22_rswcm"]
 [ext_resource type="Texture2D" uid="uid://b0n1wm6vq4aa8" path="res://Enemies/Shark1.jpg" id="23_gdee2"]
+[ext_resource type="Texture2D" uid="uid://fq0vse7xyia2" path="res://Enemies/SandVortex.png" id="26_i6xg1"]
+[ext_resource type="Texture2D" uid="uid://b5g52mgnb3rki" path="res://Enemies/Invisible.png" id="27_msvj7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wyxn"]
 texture = ExtResource("1_g2ucn")
@@ -3173,14 +3175,14 @@ tile_map_data = PackedByteArray("AADY/1L+AAABAAAAAADY/1r+AAABAAAAAADY/2L+AAABAAA
 tile_set = SubResource("TileSet_bhtwx")
 
 [node name="Player" parent="." instance=ExtResource("3_kvjt4")]
-position = Vector2(6, 221)
+position = Vector2(-2, -6107)
 collision_mask = 3
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(-9, 34)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(4, 291)
+position = Vector2(-7, 279)
 
 [node name="ChangeTextureZone" type="Area2D" parent="."]
 script = ExtResource("10_yvohk")
@@ -3209,10 +3211,10 @@ position = Vector2(67, -4570)
 position = Vector2(502, -5515)
 
 [node name="Checkpoint7" parent="." instance=ExtResource("7_pnlwe")]
-position = Vector2(25, -6456)
+position = Vector2(22, -6312)
 
 [node name="Checkpoint 8" parent="." instance=ExtResource("7_pnlwe")]
-position = Vector2(10, -6908)
+position = Vector2(2, -7005)
 
 [node name="Card1" parent="." instance=ExtResource("6_cn4ol")]
 position = Vector2(178, -843)
@@ -3364,6 +3366,183 @@ scale = Vector2(1.75, 1.75)
 rotation = 1.5708
 scale = Vector2(1.75, 1.75)
 
+[node name="SandVortex1" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(156, -4610)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="SandVortex1" index="0"]
+scale = Vector2(0.2, 0.203)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex1" index="1"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" parent="SandVortex1/Area2D" index="0"]
+scale = Vector2(0.6, 0.6)
+
+[node name="SandVortex2" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(-87, -4881)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="SandVortex2" index="0"]
+scale = Vector2(0.35, 0.356)
+texture = ExtResource("26_i6xg1")
+
+[node name="SandVortex3" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(384, -4786)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="SandVortex3" index="0"]
+scale = Vector2(0.2, 0.203)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex3" index="1"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" parent="SandVortex3/Area2D" index="0"]
+scale = Vector2(0.6, 0.6)
+
+[node name="SandVortex4" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(602, -5103)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="SandVortex4" index="0"]
+scale = Vector2(0.2, 0.203)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex4" index="1"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" parent="SandVortex4/Area2D" index="0"]
+scale = Vector2(0.6, 0.6)
+
+[node name="SandVortex8" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(-216, -5186)
+move_distance = 800.0
+speed = 1.5
+
+[node name="Sprite2D" parent="SandVortex8" index="0"]
+scale = Vector2(0.2, 0.203)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex8" index="1"]
+scale = Vector2(0.6, 0.6)
+
+[node name="CollisionShape2D" parent="SandVortex8/Area2D" index="0"]
+scale = Vector2(0.6, 0.6)
+
+[node name="SandVortex5" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(209, -5053)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="SandVortex5" index="0"]
+scale = Vector2(0.3, 0.305)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex5" index="1"]
+scale = Vector2(0.9, 0.9)
+
+[node name="CollisionShape2D" parent="SandVortex5/Area2D" index="0"]
+scale = Vector2(0.9, 0.9)
+
+[node name="SandVortex6" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(266, -5046)
+move_distance = 500.0
+speed = 1.6
+move_vertical = true
+
+[node name="Sprite2D" parent="SandVortex6" index="0"]
+scale = Vector2(0.3, 0.305)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex6" index="1"]
+scale = Vector2(0.9, 0.9)
+
+[node name="CollisionShape2D" parent="SandVortex6/Area2D" index="0"]
+scale = Vector2(0.9, 0.9)
+
+[node name="SandVortex7" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(79, -4961)
+move_distance = 500.0
+speed = 0.8
+
+[node name="Sprite2D" parent="SandVortex7" index="0"]
+scale = Vector2(0.5, 0.508)
+texture = ExtResource("26_i6xg1")
+
+[node name="CollisionShape2D" parent="SandVortex7" index="1"]
+scale = Vector2(1.5, 1.5)
+
+[node name="CollisionShape2D" parent="SandVortex7/Area2D" index="0"]
+scale = Vector2(1.5, 1.5)
+
+[node name="Invisible2" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(-31, -6619)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible2" index="0"]
+texture = ExtResource("27_msvj7")
+
+[node name="CollisionShape2D" parent="Invisible2" index="1"]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" parent="Invisible2/Area2D" index="0"]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="Invisible3" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(111, -6523)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible3" index="0"]
+scale = Vector2(0.1, 0.102)
+texture = ExtResource("27_msvj7")
+
+[node name="CollisionShape2D" parent="Invisible3" index="1"]
+rotation = 1.5708
+scale = Vector2(0.65, 0.65)
+
+[node name="CollisionShape2D" parent="Invisible3/Area2D" index="0"]
+rotation = 1.5708
+scale = Vector2(0.65, 0.65)
+
+[node name="Invisible4" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(342, -6534)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible4" index="0"]
+texture = ExtResource("27_msvj7")
+
+[node name="Invisible5" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(-141, -6455)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible5" index="0"]
+texture = ExtResource("27_msvj7")
+
+[node name="Invisible6" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(348, -6657)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible6" index="0"]
+texture = ExtResource("27_msvj7")
+
+[node name="Invisible7" parent="." instance=ExtResource("6_cn4ol")]
+position = Vector2(224, -6697)
+move_distance = 0.0
+
+[node name="Sprite2D" parent="Invisible7" index="0"]
+texture = ExtResource("27_msvj7")
+
+[node name="CollisionShape2D" parent="Invisible7" index="1"]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
+[node name="CollisionShape2D" parent="Invisible7/Area2D" index="0"]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+
 [node name="MessageStart" parent="." instance=ExtResource("14_r3g0w")]
 position = Vector2(-527, 71)
 message = "You are on an island. Just like everyone else."
@@ -3404,6 +3583,21 @@ position = Vector2(-447, -4463)
 message = "A desert, here on the island, surrounded by water. Why is that, I wonder?"
 textbox_scene = ExtResource("15_dugjk")
 
+[node name="MessageOasis" parent="." instance=ExtResource("14_r3g0w")]
+position = Vector2(-569, -5443)
+message = "An oasis in a singed land."
+textbox_scene = ExtResource("15_dugjk")
+
+[node name="MessageEnjoy" parent="." instance=ExtResource("14_r3g0w")]
+position = Vector2(-652, -5696)
+message = "Enjoy the road. Who knows how long you'll be on the island."
+textbox_scene = ExtResource("15_dugjk")
+
+[node name="MessageNowhere" parent="." instance=ExtResource("14_r3g0w")]
+position = Vector2(-620, -6196)
+message = "And then out of nowhere- everything seems to just get you down."
+textbox_scene = ExtResource("15_dugjk")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(83, -255)
 stream = ExtResource("21_b5ig0")
@@ -3420,3 +3614,17 @@ parameters/looping = true
 [editable path="Shark2"]
 [editable path="Shark3"]
 [editable path="Shark4"]
+[editable path="SandVortex1"]
+[editable path="SandVortex2"]
+[editable path="SandVortex3"]
+[editable path="SandVortex4"]
+[editable path="SandVortex8"]
+[editable path="SandVortex5"]
+[editable path="SandVortex6"]
+[editable path="SandVortex7"]
+[editable path="Invisible2"]
+[editable path="Invisible3"]
+[editable path="Invisible4"]
+[editable path="Invisible5"]
+[editable path="Invisible6"]
+[editable path="Invisible7"]
