@@ -4,17 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://pdfhaf8yarfg" path="res://Checkpoints/Flag.png" id="2_dsnf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bof8o"]
+size = Vector2(11, 12.4)
 
 [node name="Checkpoint" type="Area2D"]
 script = ExtResource("1_3vq0y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -4)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_bof8o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -2)
-scale = Vector2(0.197266, 0.197266)
+position = Vector2(-3.8147e-06, -4)
+scale = Vector2(0.114258, 0.120117)
 texture = ExtResource("2_dsnf4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
