@@ -3262,18 +3262,20 @@ position = Vector2(178, -843)
 enemy_sprite = ExtResource("5_7xala")
 
 [node name="Card2" parent="." instance=ExtResource("6_cn4ol")]
-position = Vector2(-205, -1138)
+position = Vector2(-291, -1127)
 scale = Vector2(0.75, 0.75)
+move_distance = 200.0
+speed = 1.75
 enemy_sprite = ExtResource("7_l2i8e")
 
 [node name="Card3" parent="." instance=ExtResource("6_cn4ol")]
-position = Vector2(220, -1536)
+position = Vector2(134, -1538)
 scale = Vector2(1.25, 1.25)
 move_distance = 150.0
 enemy_sprite = ExtResource("12_yj5ug")
 
 [node name="Card4" parent="." instance=ExtResource("6_cn4ol")]
-position = Vector2(472, -1564)
+position = Vector2(386, -1619)
 scale = Vector2(0.8, 0.8)
 move_distance = 150.0
 speed = 1.0
@@ -3503,7 +3505,7 @@ scale = Vector2(0.9, 0.9)
 scale = Vector2(0.9, 0.9)
 
 [node name="SandVortex7" parent="." instance=ExtResource("6_cn4ol")]
-position = Vector2(79, -4961)
+position = Vector2(78, -4921)
 move_distance = 500.0
 speed = 0.8
 
