@@ -1,13 +1,13 @@
 extends CanvasLayer
 
-@onready var text_label = $ColorRect/text_label  # ✅ Make sure this matches your scene!
+@onready var text_label = $ColorRect/text_label 
 @onready var timer = $Timer
 
 func _ready():
 	visible = false  # Start hidden
 
 func show_message(message: String) -> void:
-	print("Showing message:", message)  # Debug print
+	print("Showing message:", message)  # Debug print - This function was copied straight from ChatGPT
 	if text_label:
 		text_label.text = message
 		text_label.visible = false  # 🔄 Force refresh

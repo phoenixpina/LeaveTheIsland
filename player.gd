@@ -3,9 +3,8 @@ extends CharacterBody2D
 const SPEED = 400  # Movement speed in pixels per second
 
 func _process(delta):
-	var direction = Vector2.ZERO  # Default to no movement
+	var direction = Vector2.ZERO  # Makes it so player isn't moving without input
 
-	# Check for input and set direction
 	if Input.is_action_pressed("Right"):
 		direction.x += 1
 	if Input.is_action_pressed("Left"):
@@ -19,24 +18,23 @@ func _process(delta):
 	if direction.length() > 0:
 		direction = direction.normalized()
 
-	# Move the character
 	velocity = direction * SPEED
 	move_and_slide()
 
-var checkpoint_position: Vector2  # The player's safe position
+var checkpoint_position: Vector2 
 
 func _ready():
 	add_to_group("player")
-	checkpoint_position = global_position  # Set initial checkpoint
+	checkpoint_position = global_position  # Initial checkpoint
 	check_for_spawn()
 
 func respawn():
-	global_position = checkpoint_position  # Teleport player back
+	global_position = checkpoint_position  
 
 func set_checkpoint(new_position: Vector2):
-	checkpoint_position = new_position  # Update the respawn location
+	checkpoint_position = new_position  # Updates respawn location when checkpoints are touched
 
 func check_for_spawn():
 	var spawn_point = get_tree().current_scene.find_child("PlayerSpawn", true)
 	if spawn_point:
-		global_position = spawn_point.global_position  # Move player to spawn location
+		global_position = spawn_point.global_position 

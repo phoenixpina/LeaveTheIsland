@@ -1,12 +1,11 @@
-extends CharacterBody2D  # CharacterBody2D supports movement
+extends CharacterBody2D  
 
-@export var speed: float = 50.0  # Speed of the enemy
+@export var speed: float = 50.0  
 @export var detection_radius: float = 200.0  # How far the enemy detects the player
 
-var player: Node2D = null  # Reference to the player
+var player: Node2D = null 
 
 func _ready():
-	# Set the detection radius dynamically
 	$DetectionArea/CollisionShape2D.shape.radius = detection_radius  
 
 func _process(delta):
